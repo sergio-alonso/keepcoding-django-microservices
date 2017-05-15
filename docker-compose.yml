@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  backend:
+    restart: on-failure:10
+    build: ./keepcoding-django
+    command: gunicorn keepcoding_django.wsgi:application --bind :4500 --reload
+    volumes:
+      - ./keepcoding-django:/code
+    ports:
+      - "4500:4500"
+
+  image-uploader:
+    restart: on-failure:10
+    build: ./keepcoding-django-uploader
+    command: gunicorn service.wsgi:application --bind :4501 --reload
+    volumes:
+      - ./keepcoding-django-uploader:/code
+    ports:
+      - "4501:4501"
