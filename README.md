@@ -1,4 +1,4 @@
-# KeepCoding Djando Microservices
+# KeepCoding Django Microservices
 
 ```
 $ git --version
@@ -26,4 +26,14 @@ $ git submodule init && git submodule update
 $ mkvirtualenv -a . keepcoding-django-microservices
 
 $ git submodule foreach pip install -r requirements.txt
+```
+
+```
+$ docker-compose up -d
+```
+
+```
+$ docker-compose run backend /usr/local/bin/python manage.py makemigrations
+$ docker-compose run backend /usr/local/bin/python manage.py migrate
+$ docker-compose run backend /usr/local/bin/python manage.py seed blogs --number=10
 ```
