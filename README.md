@@ -15,7 +15,9 @@ $ virtualenv --version
 ```
 
 ```
-$ git clone git@github.com:sergio-alonso/keepcoding-django-microservices.git && cd keepcoding-django-microservices
+$ git clone git@github.com:sergio-alonso/keepcoding-django-microservices.git
+
+$ cd keepcoding-django-microservices
 
 $ git submodule init && git submodule update
 ```
