@@ -1,0 +1,8 @@
+[submodule "keepcoding-django-uploader"]
+	path = keepcoding-django-uploader
+	url = git@github.com:sergio-alonso/keepcoding-django-uploader.git
+	branch = master
+[submodule "keepcoding-django"]
+	path = keepcoding-django
+	url = git@github.com:sergio-alonso/keepcoding-django.git
+	branch = master
